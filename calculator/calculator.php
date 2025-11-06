@@ -43,7 +43,7 @@ class Calculator {
         echo "Сначала введите числа (пункт 1)\n";
     }
     break;
-                case '3':
+    case '3':
     if ($this->num1 != 0 || $this->num2 != 0) {
         $result = $this->num1 - $this->num2;
         echo "Результат вычитания: {$this->num1} - {$this->num2} = {$result}\n";
@@ -51,9 +51,14 @@ class Calculator {
         echo "Сначала введите числа (пункт 1)\n";
     }
     break;
-                case '4':
-                    echo "Деление еще не реализовано\n";
-                    break;
+    case '4':
+    if ($this->num2 != 0) {
+        $result = $this->num1 / $this->num2;
+        echo "Результат деления: {$this->num1} / {$this->num2} = {$result}\n";
+    } else {
+        echo "Ошибка: деление на ноль!\n";
+    }
+    break;
                 case '5':
                     echo "Возведение в степень еще не реализовано\n";
                     break;

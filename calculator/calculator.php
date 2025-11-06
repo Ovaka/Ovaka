@@ -44,8 +44,13 @@ class Calculator {
     }
     break;
                 case '3':
-                    echo "Вычитание еще не реализовано\n";
-                    break;
+    if ($this->num1 != 0 || $this->num2 != 0) {
+        $result = $this->num1 - $this->num2;
+        echo "Результат вычитания: {$this->num1} - {$this->num2} = {$result}\n";
+    } else {
+        echo "Сначала введите числа (пункт 1)\n";
+    }
+    break;
                 case '4':
                     echo "Деление еще не реализовано\n";
                     break;

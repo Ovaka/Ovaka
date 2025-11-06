@@ -35,9 +35,14 @@ class Calculator {
                 case '1':
                     $this->inputNumbers();
                     break;
-                case '2':
-                    echo "Сложение еще не реализовано\n";
-                    break;
+               case '2':
+    if ($this->num1 != 0 || $this->num2 != 0) {
+        $result = $this->num1 + $this->num2;
+        echo "Результат сложения: {$this->num1} + {$this->num2} = {$result}\n";
+    } else {
+        echo "Сначала введите числа (пункт 1)\n";
+    }
+    break;
                 case '3':
                     echo "Вычитание еще не реализовано\n";
                     break;

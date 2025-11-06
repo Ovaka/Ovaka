@@ -59,9 +59,14 @@ class Calculator {
         echo "Ошибка: деление на ноль!\n";
     }
     break;
-                case '5':
-                    echo "Возведение в степень еще не реализовано\n";
-                    break;
+    case '5':
+    if ($this->num1 != 0) {
+        $result = pow($this->num1, $this->num2);
+        echo "Результат возведения в степень: {$this->num1} ^ {$this->num2} = {$result}\n";
+    } else {
+        echo "Сначала введите числа (пункт 1)\n";
+    }
+    break;
                 case '6':
                     echo "Выход из программы.\n";
                     return;
